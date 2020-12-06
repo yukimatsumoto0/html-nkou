@@ -74,6 +74,10 @@ body {
     color: #8d959c
 }
 
+.main__top{
+    padding: 0 20px 96px;
+}
+
 .main__top__img img{
     width: 100%;
 }
@@ -182,25 +186,24 @@ body {
 
 .main__top__img{
     width: 100%;
+    height: 100%;
     display: block;
-    position: relative;
-}
-
-.main__top__img picture img{
     position: relative;
     z-index: 0;
 }
 
+.main__top__img img{
+    width: 100%;
+    height: 100%;
+}
 
-.main__top__img picture::before{
+.main__top__img::before {
     background-color: rgba(39,39,39,.15);
     content: "";
     display: block;
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
     z-index: 1;
 }
 
@@ -239,7 +242,9 @@ body {
 }
 
 
-/* body__content */
+/* section01 */
+
+
 .content{
     display: block;
     padding: 0 20px 96px;
@@ -256,6 +261,8 @@ body {
 
 .content__header__bg{
     position: relative;
+    margin-left: -20px;
+    margin-right: -20px;
 }
 
 .content__header__bg :after{
@@ -295,11 +302,17 @@ body {
 
 .content__header__inner__img img{
     display: block;
-    width: 50%;
+    width: 80%;
 }
 
+
 .content__header__inner__topic{
-    width: 50%;
+    width: 80%;
+}
+
+
+.content__header__inner__desc:not(:first-child){
+        margin-top: 20px;
 }
 
 .content__header__inner__desc{
@@ -307,7 +320,6 @@ body {
     background-color: #f0f3f8;
     text-align: center;
     border-radius: 4px;
-    margin-top: 20px;
 }
 
 .content__header__inner__title{
@@ -317,8 +329,266 @@ body {
     font-weight: 700;
 }
 
+
+/* section__02 */
+.content__body__inner__bg{
+    position: relative;
+    margin-left: -20px;
+    margin-right: -20px;
+}
+
+.content__body__inner__bg {
+    margin-top: 96px;
+}
+
 .content__header__inner__text{
     margin-top: 12px;
     font-size: 16px;
     line-height: 1;
 }
+
+.content__body{
+    margin: 64px auto 0;
+}
+
+.content__body__inner{
+    display: flex;
+    justify-content: space-between;
+}
+
+.content__body__inner{
+    margin-top: 96px;
+}
+
+.content__body__inner__text__unit{
+    width: calc(50%);
+}
+
+.content__body__inner__text__unit__num{
+    font-family: Gelasio,serif;
+    font-size: 60px;
+    line-height: 1;
+    letter-spacing: .12em;
+    color: #1f286f;
+}
+
+.content__body__inner__text__unit__title{
+    margin-top: 13px;
+    font-family: ProN,Hiragino Kaku Gothic ProN,Hiragino Sans,Meiryo,sans-serif;
+    font-size: 22px;
+    line-height: 2;
+}
+
+.content__body__inner__text__unit__desc {
+    font-size: 16px;
+    line-height: 2;
+    font-weight: 300;
+    letter-spacing: .06em;
+    color: #272727;
+}
+
+.content__body__inner__text__unit__desc{
+    margin-top: 22px;
+    text-align: left;
+}
+
+.content__body__inner__text__unit__link{
+    margin-top: 26px;
+    display: flex;
+}
+
+.content__body__inner__text__unit__link a{
+    text-decoration: none;
+}
+
+.content__body__inner__text__unit__text{
+    display: block;
+    position: relative;
+    font-size: 15px;
+    line-height: 1;
+    padding-right: 21px;
+    font-weight: 700;
+    color: #1f286f;
+}
+
+.content__body__inner__img{
+    width: calc(50%);
+    margin-top: 40px;
+}
+
+.content__body__inner__img img{
+    width: auto;
+    max-width: 100%;
+    border-radius: 6px;
+}
+
+.content__body__inner__text__unit__ex{
+    margin: 40px auto 0;
+    padding: 36px;
+    border-radius: 4px;
+    background-color: #f0f3f8;
+}
+
+.content__body__inner__text__unit__ex__box{
+    letter-spacing: 1.2;
+}
+
+.content__body__inner__text__unit__ex__box__title{
+    font-size: 16px;
+    line-height: 1.6;
+    font-weight: 700;
+}
+
+.content__body__inner__text__unit__ex__box__list{
+    margin-top: 16px;
+    display: flex;
+}
+
+.content__body__inner__text__unit__ex__box__list{
+    font-size: 16px;
+    line-height: 2;
+}
+
+.content__body__inner__text__unit__ex__box__list li{
+    padding-left: 18px;
+    list-style: none;
+}
+
+.content__body__inner__text__unit__ex__box__list li::before{
+    display: block;
+    position: absolute;
+    top: 14px;
+    left: 0;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: #1f286f;
+}
+
+.content__body__inner__secondrow{
+    margin-top: 32px;
+}
+
+.content__body__inner__text__unit__ex__box__add{
+    margin-top: 13px;
+    font-size: 15px;
+}
+
+/* content__footer-link */
+.content__footerlink {
+    margin: 0 auto;
+    padding: 0 20px;
+    max-width: 1120px;
+}
+
+.content__footerlink__box {
+    padding: 14px 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f0f3f8;
+    border-radius: 6px;
+}
+
+.content__footerlink__title{
+    width: calc(30%);
+    text-align: center;
+    font-size: 22px;
+    font-weight: 700;
+    color: #1f286f;
+}
+
+.content__footerlink__list{
+    width: calc(70%);
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+
+.content__footerlink__item{
+    list-style: none;
+    width: calc(50%);
+    padding: 13px 0;
+    border-bottom: 1px solid #e1e1eb;
+    font-size: 15px;
+    line-height: 1.4;
+}
+
+.content__footerlink__item a{
+    text-decoration: none;
+    color: #272727;
+}
+
+
+/* contact */
+
+
+.contact{
+    margin-top: 96px;
+    width: 100%;
+    background-color: #1f286f;
+}
+
+.contact__inner{
+    max-width: 936px;
+    padding: 80px 20px 55px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.contact___text{
+    text-align: center;
+    color: #fff;
+    width: calc(35%);
+}
+
+.contact___title {
+    display: inline-block;
+    padding-bottom: 4px;
+    position: relative;
+    font-size: 22px;
+    line-height: 1;
+    font-weight: 400;
+    letter-spacing: .12em;
+    font-family: Gelasio,serif;
+}
+
+.contact__desc{
+    margin-top: 15px;
+    font-size: 28px;
+    line-height: 1.7142857143;
+    font-weight: 700;
+}
+
+
+/* .contact__link */
+
+
+.contact__link{
+    width: calc(65%);
+    text-align: center;
+}
+
+.contact__link__btns{
+    display: flex;
+    justify-content: space-between;
+}
+
+.contact__link__btnunit{
+    width: 252px;
+}
+
+.contact__link__btn__text__left,
+.contact__link__btn__text{
+    width: 100%;
+    height: 56px;
+    background-color: #fff;
+    border-radius: 6px;
+    text-align: center;
+}
+
+
+
